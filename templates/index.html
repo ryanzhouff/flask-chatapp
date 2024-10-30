@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Flask Chat App</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/chatapp.css') }}">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.7.5/socket.io.js"
+        integrity="sha512-luMnTJZ7oEchNDZAtQhgjomP1eZefnl82ruTH/3Oj/Yu5qYtwL7+dVRccACS/Snp1lFXq188XFipHKYE75IaQQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"
+></script>
+</head>
+<body>
+<div class="chat-container">
+    <div class="chat-header">Python Chat</div>
+    <div class="username-container">
+        <span id="current-username"></span>
+        <input type="text" id="username-input" placeholder="输入新的用户名"/>
+        <button id="update-username-button">更新用户名</button>
+    </div>
+    <div class="chat-messages" id="chat-messages"></div>
+    <div class="chat-input">
+        <input type="text" id="message-input" placeholder="输入信息..."/>
+        <button id="send-button">发送</button>
+    </div>
+</div>
+
+<script src="{{ url_for('static', filename='js/chat-app.js') }}"></script>
+</body>
+</html>
