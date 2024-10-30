@@ -1,6 +1,6 @@
 import eventlet
 
-eventlet.monkey_patch(all=True, socket=True)
+eventlet.monkey_patch()
 import random
 from flask import Flask, render_template, request
 from flask_socketio import SocketIO, emit
